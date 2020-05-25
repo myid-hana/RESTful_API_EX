@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>API 연습</title>
+  </head>
+  <body>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $.ajax({ //요청에 대한 정보
+    method: "GET", //전송 방법
+    url: "https://dapi.kakao.com/v2/local/search/address.json",  //전송 주소
+    data: { query : "전북 삼성동 100" }, //보낼 데이터
+    headers: {Authorization: "KakaoAK c429d4d52311b2d68e6f83c04b892546"}  //API Key
+  })
+    .done(function( msg ) {  //요청에 대한 응답이 오면
+      console.log(msg);
+    });
+  </script>
+  </body>
+</html>
