@@ -5,7 +5,7 @@
     <title>API 연습_주소 검색</title>
   </head>
   <body>
-
+    <h1>hello</h1>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript">
@@ -16,7 +16,8 @@
     headers: {Authorization: "KakaoAK c429d4d52311b2d68e6f83c04b892546"}  //API Key
   })
     .done(function( msg ) {  //요청에 대한 응답이 오면
-      console.log(msg);
+      console.log(msg.documents[0].address_name);
+      console.log(msg.documents[0].road_address.address_name);
     });
   </script>
   </body>
