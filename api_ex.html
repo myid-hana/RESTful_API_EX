@@ -21,8 +21,8 @@
       .done(function( msg ) {  //요청에 대한 응답이 오면
         console.log(msg.documents[0].address_name);
         console.log(msg.documents[0].road_address.address_name);
-        $( "p" ).append( "<strong> 지번 주소:"+msg.documents[0].address_name+"</strong></br>" );
-        $( "p" ).append( "<strong> 도로명 주소:"+msg.documents[0].road_address.address_name+"</strong>" );
+        $( "p" ).append( "<strong> 지번 주소: "+msg.documents[0].address.address_name+"</strong></br>" );
+        $( "p" ).append( "<strong> 도로명 주소: "+msg.documents[0].road_address.address_name+"</strong>" );
       });
     }
   </script>
